@@ -1,0 +1,241 @@
+/* link google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root{
+    --white:#444;
+    --light-color:rgb(105, 102, 102);
+    --bg-color:#e6e6e6;
+    --box-shadow:.4rem .4rem 1rem #ccc,
+                -.4rem -.4rem 1rem #fff;
+    --box-shadow-inset:.4rem .4rem 1rem #ccc inset,
+                    -.4rem -.4rem 1rem #fff inset;
+  }
+
+body{
+    /* overflow: hidden; */
+    background-color: var(--bg-color);
+}
+
+body.active{
+    --black:#fff;
+    --white:#fff;
+    --light-color:#ddd;
+    --bg-color:#222;
+    --box-shadow:.4rem .4rem 1rem #111,
+                -.4rem -.4rem 1rem #333;
+    --box-shadow-inset:.4rem .4rem 1rem #111 inset,
+                      -.4rem -.4rem 1rem #333 inset;
+  }
+
+/* hide number increase decrease button */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.row-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main{
+    height: 100%;
+    margin-top: 6rem;
+    padding: 6rem;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+    background-color: var(--bg-color);
+    margin-right: 6rem;
+}
+.main2{
+    margin-top: 8rem;
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+    background-color: var(--bg-color);
+    margin-left: 6rem;
+}
+
+.grading-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: .5rem; */
+    margin: 0 auto;
+}
+.interest-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: .5rem; */
+    margin: 0 auto;
+}
+
+#grade-input,
+#capital-input,
+#percentage-input,
+#year-input{
+    width: 60%;
+    padding: 1rem;
+    border: 0;
+    outline: 0;
+    box-shadow: var(--box-shadow-inset);
+    background-color: var(--bg-color);
+    color: var(--white);
+    border-radius: .5rem;
+    font-weight: 700;
+}
+
+*::-webkit-input-placeholder {
+    color: var(--light-color) !important;
+}
+
+#result,
+#calculate{
+    border: 0;
+    padding: 1rem;
+    background-color: var(--bg-color);
+    box-shadow: var(--box-shadow);
+    color: var(--white);
+    font-weight: 700;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+#result:hover{
+    box-shadow: var(--box-shadow-inset);
+}
+#calculate:hover{
+    box-shadow: var(--box-shadow-inset);
+}
+
+#capital-input,
+#percentage-input,
+#year-input{
+    width: 90%;
+    margin-top: 2rem;
+}
+
+#calculate{
+    margin-top: 2rem;
+    font-size: 1.1rem;
+}
+
+#grade-message p,
+#interest-message p{
+    margin-top: 2rem;
+    font-weight: 700;
+}
+
+.header-text,
+.title,
+.title2,
+#grade-message p,
+#interest-message p{
+    color: var(--white);
+}
+
+#theme-toggler{
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    color:var(--black);
+    background: var(--bg-color);
+  }
+  
+  #theme-toggler:hover{
+    color: var(--white);
+    box-shadow: var(--box-shadow-inset);
+  }
+
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 490px) {
+    .row-container{
+        display: block;
+    }
+
+    .main{
+        margin: 0 auto;
+        width: 90%;
+        margin-top: 6rem;
+        padding: 2rem;
+    }
+    .main2{
+        margin: 0 auto;
+        width: 90%;
+        margin-top: 2rem;
+        padding: 2rem;
+    }
+    #grade-input{
+        width: 80%;
+    }
+
+    #capital-input,
+    #percentage-input,
+    #year-input{
+        width: 80%;
+        margin-top: 2rem;
+    }
+    
+    #result,
+    #calculate{
+        margin-top: 2rem;
+        font-size: .9rem;
+    }
+
+    #grade-message p{
+        font-size: .9rem;
+    }
+
+    #theme-toggler{
+        top: 1rem;
+        right: 1rem;
+        height: 3rem;
+        width: 3rem;
+        line-height: 3rem;
+    }
+}
+
+/* For large devices */
+@media screen and (min-width: 992px) {
+    body{
+        overflow: hidden;
+    }
+
+    .main{
+        width: 35%;
+    }
+
+    .main2{
+        width: 35%;
+    }
+
+    .grading-container{
+        width: 100%;
+    }
+}
